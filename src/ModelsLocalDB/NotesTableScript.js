@@ -44,7 +44,6 @@ export const getAllNotesByModelIdSql = (modelId, callback) => {
                     /// get all notes from notes table and add into notes callback 
                     notesArr.push({ id: rows.item(i).id, note_by: rows.item(i).note_by, note_date: rows.item(i).note_date, note_details: rows.item(i).note_details, model_id: rows.item(i).model_id })
                 }
-                
                 callback(notesArr)
 
             })

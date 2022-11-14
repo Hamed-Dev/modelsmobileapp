@@ -1,7 +1,4 @@
-import sqlite, { SQLiteDatabase } from "react-native-sqlite-storage";
 import { db, createModelsTable } from "./DBConnection";
-import { setAllModels } from "../redux/actions/ModelsAction";
-
 
 /// insert Into models Table 
 export const insertIntoModelsTable = async (model_code, model_name, model_type, cost, model_category, Additional, image) => {
