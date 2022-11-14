@@ -15,6 +15,7 @@ import AppOverlayLoading from "../../components/AppOverlayLoading";
 
 
 const ModelsList = ({ navigation }) => {
+  
     const dispatch = useDispatch()
     const [models, setModels] = useState([])
     const [txtSearch, setTxtSearch] = useState('')
@@ -23,7 +24,8 @@ const ModelsList = ({ navigation }) => {
     useEffect(() => {
 
         getModels()
-  
+        //dropModelsTable()
+
     }, [])
 
     const getModels = async () => {
