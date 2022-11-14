@@ -44,23 +44,13 @@ export const getAllNotesByModelIdSql = (modelId, callback) => {
                     /// get all notes from notes table and add into notes callback 
                     notesArr.push({ id: rows.item(i).id, note_by: rows.item(i).note_by, note_date: rows.item(i).note_date, note_details: rows.item(i).note_details, model_id: rows.item(i).model_id })
                 }
-                console.log('notesArr', notesArr)
+                
                 callback(notesArr)
 
             })
     })
 }
 
-/// delete from  Notes Table by note id
-export const deleteNotesById = (id) => {
-    db.transaction((trx) => {
-        trx.executeSql('DELETE FROM notes WHERE id = ' + id,
-            [],
-            (trx, results) => {
-
-            })
-    })
-}
 
 /// delete from  Notes Table
 export const deleteNotesSql = () => {

@@ -76,15 +76,4 @@ export const getAllModelsSql = async (callback) => {
 
 }
 
-/// delete from  models Table by models id
-export const deleteFromModelsById = () => {
-    db.transaction((trx) => {
-        // trx.executeSql('DELETE FROM models WHERE id = ' + id,
-        trx.executeSql('DELETE FROM models',
-            [],
-            (trx, results) => {
-            })
-    })
-}
-
 
